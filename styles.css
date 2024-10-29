@@ -1,0 +1,279 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons .icon {
+    margin-left: 15px;
+}
+
+.icons .icon img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.card-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover .card-button {
+    opacity: 1;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    justify-content: center;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin-left: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+}
+
+/* Carousel */
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.product-card img {
+    height: 200px;
+    /* or any fixed height you prefer */
+    object-fit: cover;
+    /* This ensures the image fits within the set dimensions without distortion */
+    width: 100%;
+    /* This makes sure the width of the image fills the container */
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card .card-body {
+    flex-grow: 1;
+}
+
+
+.carousel-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    height: 500px;
+    /* Adjust based on your carousel height */
+}
+
+.carousel-text {
+    flex: 1;
+    max-width: 40%;
+}
+
+.carousel-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.carousel-text p {
+    font-size: 1rem;
+    margin: 40px 0;
+}
+
+.shop-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.carousel-image {
+    flex: 1;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 500px;
+    /* Matches the height of the carousel */
+    object-fit: cover;
+}
+
+
+
+
+/* Shop Now button */
+.shop-now {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+/* Change the button's background to blue and text color to white on hover */
+.shop-now:hover {
+    background-color: blue;
+    color: white;
+}
